@@ -118,6 +118,7 @@ time_zone: null
 show_decimal: false
 apparent_sensor: sensor.real_feel_temperature
 aqi_sensor: sensor.air_quality_index
+uv_sensor: sensor.uv_index
 ```
 
 ### Options
@@ -148,6 +149,7 @@ aqi_sensor: sensor.air_quality_index
 | show_decimal          | boolean          | **Optional** | Displays main temperature without rounding                                                                                                                                                                                        | `false`   |
 | apparent_sensor       | string           | **Optional** | ID of the apparent temperature sensor entity. It is used to show the apparent temperature based on a sensor and will only show it if value is provided.                                                                           | `''`      |
 | aqi_sensor       | string           | **Optional** | ID of the Air Quality Index sensor entity. It is used to show the AQI based on a sensor and will only show it if value is provided.                                                                           | `''`      |
+| uv_sensor       | string           | **Optional** | ID of the UV Index sensor entity. It is used to show the UV Index based on a sensor and will only show it if value is provided.                                                                           | `''`      |
 
 ## Footnotes
 

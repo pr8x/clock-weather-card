@@ -130,4 +130,16 @@ export default css`
     padding: 2px;
     border-radius: 5px;
   }
+
+  uv-index {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .uv-icon {
+    width: 1rem;
+    height: 1rem;
+    vertical-align: middle;
+  }
 `
