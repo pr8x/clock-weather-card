@@ -83,6 +83,28 @@ import staticFillRaindrops from './icons/fill/svg-static/raindrops.svg'
 import staticLineRaindrops from './icons/line/svg-static/raindrops.svg'
 import staticFillRaindrop from './icons/fill/svg-static/raindrop.svg'
 import staticLineRaindrop from './icons/line/svg-static/raindrop.svg'
+import staticLineUvIndex1 from './icons/line/svg-static/uv-index-1.svg'
+import staticLineUvIndex2 from './icons/line/svg-static/uv-index-2.svg'
+import staticLineUvIndex3 from './icons/line/svg-static/uv-index-3.svg'
+import staticLineUvIndex4 from './icons/line/svg-static/uv-index-4.svg'
+import staticLineUvIndex5 from './icons/line/svg-static/uv-index-5.svg'
+import staticLineUvIndex6 from './icons/line/svg-static/uv-index-6.svg'
+import staticLineUvIndex7 from './icons/line/svg-static/uv-index-7.svg'
+import staticLineUvIndex8 from './icons/line/svg-static/uv-index-8.svg'
+import staticLineUvIndex9 from './icons/line/svg-static/uv-index-9.svg'
+import staticLineUvIndex10 from './icons/line/svg-static/uv-index-10.svg'
+import staticLineUvIndex11 from './icons/line/svg-static/uv-index-11.svg'
+import staticFillUvIndex1 from './icons/fill/svg-static/uv-index-1.svg'
+import staticFillUvIndex2 from './icons/fill/svg-static/uv-index-2.svg'
+import staticFillUvIndex3 from './icons/fill/svg-static/uv-index-3.svg'
+import staticFillUvIndex4 from './icons/fill/svg-static/uv-index-4.svg'
+import staticFillUvIndex5 from './icons/fill/svg-static/uv-index-5.svg'
+import staticFillUvIndex6 from './icons/fill/svg-static/uv-index-6.svg'
+import staticFillUvIndex7 from './icons/fill/svg-static/uv-index-7.svg'
+import staticFillUvIndex8 from './icons/fill/svg-static/uv-index-8.svg'
+import staticFillUvIndex9 from './icons/fill/svg-static/uv-index-9.svg'
+import staticFillUvIndex10 from './icons/fill/svg-static/uv-index-10.svg'
+import staticFillUvIndex11 from './icons/fill/svg-static/uv-index-11.svg'
 
 export const animatedIcons = {
   line: {
@@ -206,7 +228,18 @@ export const staticIcons = {
     },
     windy: staticLineWindsock,
     'windy-exceptional': staticLineWindsock,
-    exceptional: staticLineHurricane
+    exceptional: staticLineHurricane,
+    'uv-index-1': staticLineUvIndex1,
+    'uv-index-2': staticLineUvIndex2,
+    'uv-index-3': staticLineUvIndex3,
+    'uv-index-4': staticLineUvIndex4,
+    'uv-index-5': staticLineUvIndex5,
+    'uv-index-6': staticLineUvIndex6,
+    'uv-index-7': staticLineUvIndex7,
+    'uv-index-8': staticLineUvIndex8,
+    'uv-index-9': staticLineUvIndex9,
+    'uv-index-10': staticLineUvIndex10,
+    'uv-index-11': staticLineUvIndex11
   },
   fill: {
     rainy: {
@@ -246,6 +279,17 @@ export const staticIcons = {
     },
     windy: staticFillWindsock,
     'windy-exceptional': staticFillWindsock,
-    exceptional: staticFillHurricane
+    exceptional: staticFillHurricane,
+    'uv-index-1': staticFillUvIndex1,
+    'uv-index-2': staticFillUvIndex2,
+    'uv-index-3': staticFillUvIndex3,
+    'uv-index-4': staticFillUvIndex4,
+    'uv-index-5': staticFillUvIndex5,
+    'uv-index-6': staticFillUvIndex6,
+    'uv-index-7': staticFillUvIndex7,
+    'uv-index-8': staticFillUvIndex8,
+    'uv-index-9': staticFillUvIndex9,
+    'uv-index-10': staticFillUvIndex10,
+    'uv-index-11': staticFillUvIndex11
   }
 }

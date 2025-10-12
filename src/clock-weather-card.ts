@@ -224,6 +224,9 @@ export class ClockWeatherCard extends LitElement {
     const localizedApparent = apparentTemp !== null ? this.toConfiguredTempWithUnit(tempUnit, apparentTemp) : null
     const apparentString = this.localize('misc.feels-like')
     const aqiString = this.localize('misc.aqi')
+    const uv = this.getUv()
+    const uvIcon = this.getUvIcon(uv)
+    const uvString = this.localize('misc.uv-index')
 
     return html`
       <clock-weather-card-today-left>
@@ -236,6 +239,7 @@ export class ClockWeatherCard extends LitElement {
             ${this.config.show_humidity && localizedHumidity ? html`<br>${localizedHumidity}` : ''}
             ${this.config.apparent_sensor && apparentTemp ? html`<br>${apparentString}: ${localizedApparent}` : ''}
             ${this.config.aqi_sensor && aqi !== null ? html`<br><aqi style="background-color: ${aqiBackgroundColor}; color: ${aqiTextColor};">${aqi} ${aqiString}</aqi>` : ''}
+            ${this.config.uv_sensor && uv !== null && uvIcon ? html`<br><uv-index><img class="uv-icon" src=${uvIcon} />${Math.round(uv)} ${uvString}</uv-index>` : ''}
           </clock-weather-card-today-right-wrap-top>
           <clock-weather-card-today-right-wrap-center>
             ${this.config.hide_clock ? localizedTemp ?? 'n/a' : this.time()}
@@ -452,7 +456,8 @@ export class ClockWeatherCard extends LitElement {
       time_zone: config.time_zone ?? undefined,
       show_decimal: config.show_decimal ?? false,
       apparent_sensor: config.apparent_sensor ?? undefined,
-      aqi_sensor: config.aqi_sensor ?? undefined
+      aqi_sensor: config.aqi_sensor ?? undefined,
+      uv_sensor: config.uv_sensor ?? undefined
     }
   }
 
@@ -540,6 +545,26 @@ export class ClockWeatherCard extends LitElement {
     }
     // Use white text for dark backgrounds (red, purple, maroon).
     return '#FFFFFF'
+  }
+
+  private getUv (): number | null {
+    if (this.config.uv_sensor) {
+      const uvSensor = this.hass.states[this.config.uv_sensor] as HassEntity | undefined
+      const uv = uvSensor?.state ? parseFloat(uvSensor.state) : undefined
+      if (uv !== undefined && !isNaN(uv)) {
+        return uv
+      }
+    }
+    return null
+  }
+
+  private getUvIcon (uv: number | null): string | null {
+    if (uv == null) {
+      return null
+    }
+    const uvRounded = Math.round(uv)
+    const uvClamped = Math.max(1, Math.min(11, uvRounded))
+    return this.toIcon(`uv-index-${uvClamped}`, this.config.weather_icon_type, true, 'static')
   }
 
   private getSun (): HassEntityBase | undefined {
