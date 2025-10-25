@@ -45,7 +45,7 @@ console.info(
 (window as any).customCards = (window as any).customCards || [];
 (window as any).customCards.push({
   type: 'clock-weather-card',
-  name: 'Clock Weather Card',
+  name: 'Clock Weather Card (pr8x)',
   description: 'Shows the current date/time in combination with the current weather and an iOS insipired weather forecast.'
 })
 
