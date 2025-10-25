@@ -44,7 +44,7 @@ console.info(
 // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
 (window as any).customCards = (window as any).customCards || [];
 (window as any).customCards.push({
-  type: 'clock-weather-card-pr8x',
+  type: 'clock-weather-card',
   name: 'Clock Weather Card (pr8x)',
   description: 'pr8x'
 })
