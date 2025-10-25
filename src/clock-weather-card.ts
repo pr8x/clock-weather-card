@@ -239,7 +239,7 @@ export class ClockWeatherCard extends LitElement {
             ${this.config.show_humidity && localizedHumidity ? html`<br>${localizedHumidity}` : ''}
             ${this.config.apparent_sensor && apparentTemp ? html`<br>${apparentString}: ${localizedApparent}` : ''}
             ${this.config.aqi_sensor && aqi !== null ? html`<br><aqi style="background-color: ${aqiBackgroundColor}; color: ${aqiTextColor};">${aqi} ${aqiString}</aqi>` : ''}
-            ${this.config.uv_sensor && uv !== null && uvIcon ? html`<br><uv-index><img class="uv-icon" src=${uvIcon} />${Math.round(uv)} ${uvString}</uv-index>` : ''}
+            ${this.config.uv_sensor && uv !== null && uvIcon ? html`<br><uv-index><img class="uv-icon" src=${uvIcon} />${uvString}</uv-index>` : ''}
           </clock-weather-card-today-right-wrap-top>
           <clock-weather-card-today-right-wrap-center>
             ${this.config.hide_clock ? localizedTemp ?? 'n/a' : this.time()}
