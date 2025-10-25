@@ -138,8 +138,7 @@ export default css`
   }
 
   .uv-icon {
-    width: 1rem;
-    height: 1rem;
+    width: 4rem;
     vertical-align: middle;
   }
 `
